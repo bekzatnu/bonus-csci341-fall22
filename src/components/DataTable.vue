@@ -199,6 +199,7 @@ export default {
     updateTable() {
       this.isNew = false
       this.toUpdate = null
+      this.infos = []
       axios
         .get(server_url+'/api/'+this.type+'/')
         .then((response) => {
@@ -207,7 +208,6 @@ export default {
         })
         .catch((error) => {
           alert("Could not load data")
-          this.infos = []
           console.log(error)
         })
     }
