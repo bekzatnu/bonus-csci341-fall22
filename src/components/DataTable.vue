@@ -25,7 +25,7 @@
                      hover:text-slate-200 hover:bg-slate-800
                      border-t-1 border-solid border-slate-200 border-l-0 border-r-0">
 
-            <td class="py-3 px-6" v-for="(df, fidx) in Object.keys(info_empty[type])" :key="fidx">
+            <td v-show="df != 'id'" class="py-3 px-6" v-for="(df, fidx) in Object.keys(info_empty[type])" :key="fidx">
               <input :type="typeof info_empty[type][df] === 'number' ? 'number' : 'text'"
                    min="0"
                    :value="this.info_empty[this.type][df]"
